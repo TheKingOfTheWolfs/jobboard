@@ -1,12 +1,12 @@
-import data from "./data.json"
-import Jobs from "./components/Jobs"
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./components/AppRouter";
 
 function App() {
+
   return (
-    <div>
-      <div className="header"/>
-      <Jobs data={data} />
-    </div>
+   <BrowserRouter>
+      <AppRouter />
+   </BrowserRouter>
   );
 }
 
