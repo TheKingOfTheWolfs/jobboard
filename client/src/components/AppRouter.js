@@ -4,6 +4,7 @@ import {Routes, Route, Router, Redirect, BrowserRouter, Navigate} from "react-ro
 import { Context } from "../index";
 import { authRoutes, publicRoutes } from '../routes'
 
+
 function AppRouter() {
     const {user} = useContext(Context)
 

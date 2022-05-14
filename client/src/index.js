@@ -4,12 +4,14 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
 import UserStore from "./store/UserStore";
+import JobStore from "./store/JobStore";
 
 export const Context = createContext(null)
 
 ReactDOM.render(
   <Context.Provider value={{
-    user: new UserStore()
+    user: new UserStore(),
+    jobs: new JobStore,
   }} >
     <App />
   </Context.Provider>,
