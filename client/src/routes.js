@@ -3,18 +3,18 @@ import { ADMIN_ROUTE, COMPANY_ROUTE, JOB_ROUTE, LOGIN_ROUTE, MAIN_ROUTE, REGISTR
 export const authRoutes = [
      {
          path: ADMIN_ROUTE,
-        //  Component: Admin
+         Component: <p>admin</p>
      },
      // here you put next routs for the admins AKA access to company pages and etc
 ]
 export const publicRoutes = [
     {
         path: MAIN_ROUTE,
-        // Component: Main
+        Component: <p>Testing main route</p>
     },
     {
         path: JOB_ROUTE + '/:id',
-        // Component: Job
+        Component: <p>JOB</p>
     },
     {
         path: LOGIN_ROUTE,

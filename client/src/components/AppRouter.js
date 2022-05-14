@@ -1,22 +1,23 @@
+import { useContext } from "react";
 import ReactDOM from "react-dom/client";
-// import {Routes, Route, Router, Redirect, BrowserRouter} from "react-router-dom"
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
+import {Routes, Route, Router, Redirect, BrowserRouter, Navigate} from "react-router-dom"
+import { Context } from "../index";
 import { authRoutes, publicRoutes } from '../routes'
-import {MAIN_ROUTE} from '../utils/const'
 
 function AppRouter() {
-    const isAuth = false
+    const {user} = useContext(Context)
+
+    console.log(user)
   return (
     <Routes>
-       {isAuth && authRoutes.map(({path, Component}) =>
-    <Route exact key={path} path={path} element={<Component/>}/>
+       {user.isAuth && authRoutes.map(({path, Component}) =>
+    <Route exact key={path} path={path} element={Component}/>
     )}
      {publicRoutes.map(({path, Component}) =>
-    <Route exact key={path} path={path} element={<Component/>}/>
+    <Route exact key={path} path={path} element={Component}/>
     )}
-    <Navigate to={MAIN_ROUTE}/>
+    <Route path="*" element={<p>There's nothing here: 404!</p>} />
     </Routes>
-
   )
 }
 
