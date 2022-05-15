@@ -17,7 +17,7 @@ export const publicRoutes = [
     },
     {
         path: JOB_ROUTE + '/:id',
-        Component: <Job/>
+        Component: <p>text job</p>
     },
     {
         path: LOGIN_ROUTE,
