@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Job from "../pages/Job";
+import Job from "./Job";
 
 const Jobs = ({ data, setKeywords, keywords }) => {
   console.log(data);

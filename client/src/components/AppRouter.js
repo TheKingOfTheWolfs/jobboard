@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import ReactDOM from "react-dom/client";
 import {Routes, Route, Router, Redirect, BrowserRouter, Navigate} from "react-router-dom"
 import { Context } from "../index";
 import { authRoutes, publicRoutes } from '../routes'

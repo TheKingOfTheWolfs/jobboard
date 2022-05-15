@@ -1,20 +1,23 @@
+import "./index.scss";
+import MainPage from "./components/pages/MainPage";
+import Job from "./components/pages/Job"
 import { ADMIN_ROUTE, COMPANY_ROUTE, JOB_ROUTE, LOGIN_ROUTE, MAIN_ROUTE, REGISTRATION_ROUTE } from "./utils/const"
 
 export const authRoutes = [
      {
          path: ADMIN_ROUTE,
-         Component: <p>admin</p>
+         Component: <p>Admin</p>
      },
      // here you put next routs for the admins AKA access to company pages and etc
 ]
 export const publicRoutes = [
     {
         path: MAIN_ROUTE,
-        Component: <p>Testing main route</p>
+        Component: <MainPage/>
     },
     {
         path: JOB_ROUTE + '/:id',
-        Component: <p>JOB</p>
+        Component: <Job/>
     },
     {
         path: LOGIN_ROUTE,
