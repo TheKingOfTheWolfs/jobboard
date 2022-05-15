@@ -1,31 +1,47 @@
 import React, { useContext } from 'react'
 import {Context} from "../../index"
+import { NavLink, Link } from 'react-router-dom';
 
 function NavBar() {
     const {user} = useContext(Context)
   return (
-   <div className='site-pusher'>
-       <header className='header'>
-           <div className='full-header'>
-               <a className=''></a>
-               <nav>
-                   <div>
-                   <img className='header-logo'></img>
-                   <button className='close-menu'></button>
-                   </div>
-                   <a>Jobs</a>
-                   <a>Menu</a>
-                   <a>Career</a>
-                   <a>Something</a>
-                   <div className='menu-links-right'>
-                       <a>Post a Job</a>
-                       <a>Sign In</a>
-                       <a>Sign Up</a>
-                   </div>
-               </nav>
-           </div>
-       </header>
-   </div>
+    <nav className='navbar'>
+    <ul className='navbar__list'>
+        <Link className='navbar__logo' to='/'>
+            Navbar
+        </Link>
+        <li className='navbar__list__item'>
+            <NavLink className='navbar__link' exact to='/'>
+                Home
+            </NavLink>
+        </li>
+        <li className='navbar__list__item'>
+            <NavLink className='navbar__link' to='/about'>
+                About
+            </NavLink>
+        </li>
+        <li className='navbar__list__item'>
+            <NavLink className='navbar__link' to='/services'>
+                Services
+            </NavLink>
+        </li>
+        <li className='navbar__list__item'>
+            <NavLink className='navbar__link' to='/gallery'>
+                Gallery
+            </NavLink>
+        </li>
+        <li className='navbar__list__item'>
+            <NavLink className='navbar__link' to='/contact'>
+                Contact
+            </NavLink>
+        </li>
+        <div className='navbar__button'>
+            <div className='navbar__button__component'></div>
+            <div className='navbar__button__component'></div>
+            <div className='navbar__button__component'></div>
+        </div>
+    </ul>
+</nav>
 )
 }
 
