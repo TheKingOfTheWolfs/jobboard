@@ -1,6 +1,6 @@
 
 import React, { createContext } from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App";
 import UserStore from "./store/UserStore";
@@ -8,14 +8,14 @@ import JobStore from "./store/JobStore";
 
 export const Context = createContext(null)
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <Context.Provider value={{
     user: new UserStore(),
     jobs: new JobStore,
   }} >
     <App />
   </Context.Provider>,
-  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
