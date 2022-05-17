@@ -2,8 +2,9 @@ import React from "react";
 
 const Search = ({ setSearchKeyword }) => {
   return (
-    <div className="header-container">
+    <div className="search">
       <ul>
+        <input type="text" onChange={(e) => setSearchKeyword(e.target.value)} />
         <input type="text" onChange={(e) => setSearchKeyword(e.target.value)} />
       </ul>
     </div>
