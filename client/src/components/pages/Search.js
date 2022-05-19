@@ -4,8 +4,9 @@ const Search = ({ setSearchKeyword }) => {
   return (
     <div className="search">
       <ul>
-        <input type="text" onChange={(e) => setSearchKeyword(e.target.value)} />
-        <input type="text" onChange={(e) => setSearchKeyword(e.target.value)} />
+        <input placeholder="Position" type="text" onChange={(e) => setSearchKeyword(e.target.value)} />
+        <input placeholder="Location" type="text" onChange={(e) => setSearchKeyword(e.target.value)} />
+        <button>Search</button>
       </ul>
     </div>
   );

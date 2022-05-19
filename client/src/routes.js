@@ -1,7 +1,9 @@
 import "./index.scss";
 import MainPage from "./components/pages/MainPage";
-import Job from "./components/pages/Job"
-import { ADMIN_ROUTE, COMPANY_ROUTE, JOB_ROUTE, LOGIN_ROUTE, MAIN_ROUTE, REGISTRATION_ROUTE } from "./utils/const"
+import { ADMIN_ROUTE, COMPANY_ROUTE, JOB_ROUTE, LOGIN_ROUTE, MAIN_ROUTE, REGISTRATION_ROUTE, JOBSEARCH_ROUTE } from "./utils/const"
+import JobSearch from "./components/pages/JobSearchPage";
+import Job from "./components/pages/Job";
+import Jobs from "./components/pages/JobsBar";
 
 export const authRoutes = [
      {
@@ -16,8 +18,12 @@ export const publicRoutes = [
         Component: <MainPage/>
     },
     {
+        path: JOBSEARCH_ROUTE,
+        Component: <Jobs/>
+    },
+    {
         path: JOB_ROUTE + '/:id',
-        Component: <p>text job</p>
+        // Component: 
     },
     {
         path: LOGIN_ROUTE,
